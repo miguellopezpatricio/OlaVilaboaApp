@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="miguellopez.olavilaboaapp.fragments.InicioFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment android:id="@+id/nav_news"
+        android:name="miguellopez.olavilaboaapp.fragments.NewsFragment"
+        android:label="@string/menu_news"
+        tools:layout="@layout/fragment_news"  />
+
+    <fragment
+        android:id="@+id/nav_culture"
+        android:name="miguellopez.olavilaboaapp.fragments.CultureFragment"
+        android:label="@string/menu_culture"
+        tools:layout="@layout/fragment_culture" />
+
+    <fragment
+        android:id="@+id/nav_sleep"
+        android:name="miguellopez.olavilaboaapp.fragments.SleepFragment"
+        android:label="@string/menu_sleep"
+        tools:layout="@layout/fragment_sleep" />
+
+    <fragment android:id="@+id/nav_eat"
+        android:name="miguellopez.olavilaboaapp.fragments.EatFragment"
+         android:label="@string/menu_eat"
+        tools:layout="@layout/fragment_eat" >
+        <action
+            android:id="@+id/action_nav_eat_to_barFragment"
+            app:destination="@id/barFragment" />
+        <action
+            android:id="@+id/action_nav_eat_to_restaurantFragment"
+            app:destination="@id/restaurantFragment" />
+    </fragment>
+
+    <fragment android:id="@+id/nav_tourism"
+        android:name="miguellopez.olavilaboaapp.fragments.TourismFragment"
+        android:label="@string/menu_tourism"
+        tools:layout="@layout/fragment_tourism"  >
+        <action
+            android:id="@+id/action_nav_tourism_to_landFragment"
+            app:destination="@id/landFragment" />
+        <action
+            android:id="@+id/action_nav_tourism_to_seaFragment"
+            app:destination="@id/seaFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/nav_about"
+        android:name="miguellopez.olavilaboaapp.activities.ContainerAboutActivity"
+        android:label="@string/menu_about"
+        tools:layout="@layout/activity_container_about" />
+    <fragment
+        android:id="@+id/landFragment"
+        android:name="miguellopez.olavilaboaapp.LandFragment"
+        android:label="fragment_land"
+        tools:layout="@layout/fragment_land" />
+    <fragment
+        android:id="@+id/seaFragment"
+        android:name="miguellopez.olavilaboaapp.SeaFragment"
+        android:label="fragment_sea"
+        tools:layout="@layout/fragment_sea" />
+    <fragment
+        android:id="@+id/barFragment"
+        android:name="miguellopez.olavilaboaapp.BarFragment"
+        android:label="fragment_bar"
+        tools:layout="@layout/fragment_bar" />
+    <fragment
+        android:id="@+id/restaurantFragment"
+        android:name="miguellopez.olavilaboaapp.RestaurantFragment"
+        android:label="fragment_restaurant"
+        tools:layout="@layout/fragment_restaurant" />
+
+
+</navigation>
